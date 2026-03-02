@@ -1,20 +1,25 @@
-# DAA Beer Center
+# Beer Center
 
-iOS app for managing craft beer catalogs. Browse breweries, explore their beers, mark favorites, and keep track of your collection. Built with SwiftUI as a university project for the Advanced Application Development (DAA) course.
+iOS app for browsing and managing craft beer catalogs. Explore breweries, discover beers, mark favorites, and keep track of your collection — all backed by a REST API.
+
+<div align="center">
+  <img src="assets/brewery-list.png" alt="Brewery List" width="220" />
+  <img src="assets/beer-list.png" alt="Beer List" width="220" />
+  <img src="assets/beer-detail.png" alt="Beer Detail" width="220" />
+</div>
 
 ## Features
 
-- **Brewery management**: Add, view, and delete breweries, organized by origin (national vs. imported). Each brewery has a name, origin type, and logo.
-- **Beer catalog**: Each brewery contains its own beer list. Add beers with name, type (Lager, Amber, IPA...), description, ABV, calories, and a logo (via URL or photo gallery).
-- **Favorites**: Mark beers as favorites — they appear in a dedicated section at the top of each brewery's list.
-- **Search & sort**: Filter beers by name with a search bar. Sort by name, ABV, type, or calories in ascending/descending order.
-- **Beer detail view**: Full beer profile with image, type, description, ABV, and calorie info. Favorited beers show a heart indicator.
-- **Swipe actions**: Swipe left on any beer to delete, edit, or toggle favorite. Swipe left on a brewery to delete it.
-- **Image handling**: Logos can be loaded from a URL or uploaded from the device's photo gallery (stored as compressed base64).
+- **Brewery management** — Add, view, and delete breweries organized by origin (national vs. imported), each with a name, type, and logo
+- **Beer catalog** — Each brewery has its own beer list with name, type (Lager, Amber, IPA...), description, ABV, calories, and image
+- **Favorites** — Mark beers as favorites with a dedicated section at the top of each brewery's list
+- **Search & sort** — Filter beers by name, sort by name/ABV/type/calories in ascending or descending order
+- **Swipe actions** — Swipe left to delete, edit, or toggle favorite on any beer or brewery
+- **Image handling** — Logos loaded from URL or uploaded from the device's photo gallery (stored as compressed base64)
 
 ## Architecture
 
-The app follows the **MVVM pattern**:
+MVVM pattern with a REST API backend for all CRUD operations:
 
 ```
 BeerCenterDAA/
@@ -31,21 +36,15 @@ BeerCenterDAA/
 └── ModificarCervezaView.swift    # Edit beer form
 ```
 
-Data persistence is handled through a **REST API** backend — all CRUD operations (breweries and beers) go through `APIService.swift`, which communicates with the API via standard HTTP methods.
-
 ## Tech stack
 
-- **Swift** / **SwiftUI**
-- **MVVM** architecture
-- **REST API** integration (URLSession)
-- **AsyncImage** for remote image loading
-- **PhotosPicker** for gallery image upload
+- **SwiftUI** — Declarative UI framework
+- **MVVM** — Clean separation of concerns
+- **REST API** — Full CRUD via URLSession
+- **AsyncImage** — Remote image loading
+- **PhotosPicker** — Gallery image upload
 - Xcode / iOS 16.4+
-
-## Demo
-
-A video demo of the app is included in the repo: `APP_TESTING.mp4`
 
 ## Context
 
-Built for the **Desarrollo de Aplicaciones Avanzadas (DAA)** course (Computer Engineering degree, Universidad de Salamanca).
+Built for the **Desarrollo de Aplicaciones Avanzadas (DAA)** course at Universidad de Salamanca.
