@@ -3,9 +3,9 @@
 iOS app for browsing and managing craft beer catalogs. Explore breweries, discover beers, mark favorites, and keep track of your collection — all backed by a REST API.
 
 <div align="center">
-  <img src="assets/brewery-list.png" alt="Brewery List" width="220" />
-  <img src="assets/beer-list.png" alt="Beer List" width="220" />
-  <img src="assets/beer-detail.png" alt="Beer Detail" width="220" />
+  <img src="assets/brewery-list.png" alt="Brewery List" height="450" />
+  <img src="assets/beer-list.png" alt="Beer List" height="450" />
+  <img src="assets/beer-detail.png" alt="Beer Detail" height="450" />
 </div>
 
 ## Features
